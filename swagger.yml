@@ -1,0 +1,38 @@
+swagger: '2.0'
+info:
+    description: This is the swagger file that goes with our server code
+    version: '1.0.0'
+    title: Swagger Rest Article
+consumes:
+    - application/json
+produces:
+    - application/json
+
+basePath: /api
+
+paths:
+    /email:
+        post:
+            operationId: email_reader.post_data
+            tags:
+                - email
+            # parameters:
+            #     - name: email
+                  # in: body
+                  # description: Import new data by email log
+                  # required: True
+                  # schema:
+                  #     type: object
+                  #     properties:
+                  #         alarm_id:
+                  #             type: string
+                  #             description: Full name of user to create
+                  #         email:
+                  #             type: string
+                  #             description: Email user to create
+                  #         age:
+                  #             type: integer
+                  #             description: Age of user to create
+            responses:
+                201:
+                    description: Successfully input data from log
